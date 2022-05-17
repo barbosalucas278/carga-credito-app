@@ -1,29 +1,28 @@
 {
   "expo": {
-    "name": "carga-credito-app",
+    "name": "Carga de Credito",
     "slug": "carga-credito-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#cfca74"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
-      }
+        "backgroundColor": "#cfca74"
+      },
+      "package": "com.lucasbarbosa.cargacreditoapp"
     },
     "web": {
       "favicon": "./assets/favicon.png"
