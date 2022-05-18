@@ -94,7 +94,14 @@ export default function Home({ navigation }) {
             user={user}
           ></Scan>
         )}
-        {showCreditos && <Creditos creditos={puntos}></Creditos>}
+        {showCreditos && (
+          <>
+            {esAdmin(auth.currentUser.email) && (
+              <Text style={styles.titulo}>Administrador</Text>
+            )}
+            <Creditos creditos={puntos}></Creditos>
+          </>
+        )}
       </View>
       <ActionButton
         buttonColor="transparent"
@@ -177,5 +184,9 @@ const styles = StyleSheet.create({
   imageBtn: {
     width: Dimensions.get("screen").width * 0.165,
     height: Dimensions.get("screen").height * 0.075,
+  },
+  titulo: {
+    fontSize: theme.fontSizes.heading,
+    fontFamily: theme.font.main,
   },
 });

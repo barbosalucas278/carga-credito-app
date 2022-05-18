@@ -15,5 +15,6 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 200,
     marginBottom: 250,
+    fontFamily: theme.font.main,
   },
 });

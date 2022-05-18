@@ -54,7 +54,7 @@ export default function SplashAnimado() {
       <View style={{ position: "relative" }}>
         <Image
           resizeMode="contain"
-          style={{ width: 110, height: 110 }}
+          style={{ width: 100, height: 100 }}
           source={require("../../assets/icon.png")}
         ></Image>
       </View>

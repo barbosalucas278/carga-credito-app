@@ -6,12 +6,14 @@ import {
   Button,
   Dimensions,
   Alert,
+  ActivityIndicator,
 } from "react-native";
 import { useIsFocused } from "@react-navigation/native";
 import { BarCodeScanner } from "expo-barcode-scanner";
 import { Toast } from "react-native-toast-message/lib/src/Toast";
 import Constants from "expo-constants";
 import { updatePuntosUser } from "../../services/FirestoreServices";
+import theme from "../../theme";
 
 export default function Scanner(props) {
   const isFocused = useIsFocused();
@@ -142,10 +144,16 @@ export default function Scanner(props) {
   };
 
   if (hasPermission === null) {
-    return <Text>Requesting for camera permission</Text>;
+    return (
+      <View style={styles.containerScanner}>
+        <ActivityIndicator size={180} color={theme.colores.details} />
+      </View>
+    );
   }
   if (hasPermission === false) {
-    return <Text>No access to camera</Text>;
+    return (
+      <Text>La aplicación no tiene acceso a la camara de su dispositivo.</Text>
+    );
   }
 
   return (

@@ -20,7 +20,7 @@ export default function Main() {
   const { isLogin } = useContext(AuthContext);
 
   return (
-    <View style={{ flex: 1 }}>
+    <View style={{ flex: 1, backgroundColor: "#cfca74" }}>
       <StatusBar style="dark"></StatusBar>
       <NavigationContainer>
         <Stack.Navigator
